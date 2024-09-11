@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KPR Scholarship</title>
+</head>
+
+<body>
+    <?php
+      if(isset(s_post["fname"]))
+        { echo "Form is successfully submitted";
+          echo s_post["fname"]."<br>     
+    <form id="myform" action="submit.php" method="post">
+  <h1>Scholarship Renewal:</h1>
+  <h3 style="color:green"><strong>Student info:</strong></h3>
+     <label>Full Name:</label>
+      <br>
+      <input type="text" name="fname" id = "name" placeholder = "Enter your name">
+      <br><br>
+         <label>Roll No:</label>
+      <br>
+      <input type="number" name="fname" id="name" placeholder="">
+      <br><br>
+           <label>Register No:</label>
+      <br>
+      <input type="number" name="fname" id="name" placeholder="">
+      <br><br>
+      <label>DOB:</label>
+      <br>
+      <input type="number" name="fname" id="name" placeholder="dd/mm/yyyy">
+      <br><br>
+      <label>Mobile number:<label>
+      <br>
+      <input typr ="number" name="fname" id="name" placeholder = "enter mobile number">
+      <br><br>
+      <label>Address:</label>
+      <br>
+      <textarea rows="10" cols="15" wrap="virtual"> </textarea>                                          
+      <br><br>
+      <label>Email:</label>
+      <br>
+      <input type="email" name="email" id="name" placeholder="Enter your email">
+      <br><br>
+      <label>Gender:</label>
+      <br>
+      <input type="radio"" name="fname" id="female">
+      <span>female</span>
+      <input type="radio" name="fname" id="male">
+      <span>male</span>
+       <input type="radio" name="fname" id="others">
+      <span>others</span
+     <br><br>
+        <br>
+      <label>Categories:</label>
+          <br>
+          <input type="checkbox" name="fname" id="">
+      <span>First graduate</span>
+            <br>
+          <input type="checkbox" name="fname" id="">
+      <span>Sports</span>
+            <br>
+          <input type="checkbox" name="fname" id="">
+      <span>Merit</span>
+            <br>
+          <input type="checkbox" name="fname" id="">
+      <span>Others</span><br/>
+     <label>Quota:</label>
+          <select>
+    <option>Select</option>
+    <option>GQ</option>
+     <option>MQ</option>
+    <option>7.5 reservation</option>                                          <option>Sports</option>  
+   <option>Ex-service man</option>                                         
+      </select>
+      <br/><label>Scholarship details(if Others):</label>
+                                   <br>     <textarea rows="10" cols="30" wrap="virtual"> </textarea>                                          
+            <br/>                                                    
+  <label>Upload photo:</label><br>
+           <input type="file" name="fname" id="Hosteler" placeholder="choose a file">
+           <br/>                                                    <label>Upload 12th marksheet:</label><br>
+           <input type="file" name="fname" id="">
+         <br><br>                                                             <label>First graduate:(Upload only if you are eligible)</label><br>
+           <input type="file" name="fname" id=""><br/>
+         <label>CGPA:</label>
+      <br>
+      <input type="text" name="fname" id="name" placeholder="">
+      <br><br>                                                   
+            <h3 style="color:green">Details of Gaurdian/parent:</h3>
+        <label>Name:</label>
+      <br>
+      <input type="text" name="fname" id="file" placeholder="Enter name">
+      <br><br>
+        <label>Contact number:</label>
+      <br>
+      <input type="number" name="fname" id="name" placeholder="Enter mobile number">
+      <br><br>
+       <label>Email address:</label>
+      <br>
+      <input type="email" name="fname" id="name" placeholder="Mail id">
+      <br><br>
+        <label>Address:</label><br>
+        <textarea rows="10" cols="15" wrap="virtual"> </textarea>  
+      <br><br>
+        <h3 style="color:green">
+          <strong>Student bank details:</strong>
+        </h3>
+       <label>Account number:</label>
+      <br>
+      <input type="number" name="fname" id="name" placeholder="">
+      <br><br>
+         <label>Re-enter account number:</label>
+      <br>
+      <input type="number" name="fname" id="name" placeholder="">
+      <br><br>
+       <label>IFSC Code:</label>
+      <br>
+      <input type="text" name="fname" id="name" placeholder="">
+      <br><br>
+       <label>Account holder's Name:</label>
+      <br>
+      <input type="text" name="fname" id="name" placeholder="">
+      <br><br>
+           <label>Bank Name:</label>
+      <br>
+      <input type="text" name="fname" id="name" placeholder="">
+      <br><br>
+         <label>Branch Name:</label>
+      <br>
+      <input type="text" name="fname" id="name" placeholder="">
+      <br><br>
+      <br><br>
+    <button type="submit" style="color:blue">submit</button>
+  </form>                                                                     <?php } ?> </body>
+
+</html>
