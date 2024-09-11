@@ -1,0 +1,199 @@
+
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPR Institute of Engineering and Technology College in Uthupalayam, Tamil Nadu - Workshop Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white; /* Light blue background for the whole page */
+            margin: 0;
+            padding: 20px;
+            background-image: url("kpr2.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #bcd5fa; /* White background for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: darkblue; /* Dark blue color for the heading */
+        }
+        h2 {
+            text-align: center;
+            color: darkblue;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: darkblue;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #e65c00;
+        }
+        .payment-options,
+        .workshop-selection {
+            margin-top: 20px;
+        }
+        .payment-options input,
+        .workshop-selection input {
+            margin-right: 10px;
+        }
+        .workshop-selection div {
+            margin-bottom: 10px; /* Space between each radio button option */
+        }
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        #qrcode { 
+            margin: 20px auto; 
+            text-align: center;
+        } 
+    </style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>KPR Institute of Engineering and Technology College in Uthupalayam, Tamil Nadu</h1>
+    <h2>Workshop Registration</h2>
+
+    <form id="registration-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <div class="workshop-selection">
+            <label>Workshop Selection:</label>
+            <div>
+                <input type="radio" id="workshop1" name="workshop" value="workshop1" required>
+                <label for="workshop1">Workshop 1: Introduction to Web Development</label>
+            </div>
+            <div>
+                <input type="radio" id="workshop2" name="workshop" value="workshop2">
+                <label for="workshop2">Workshop 2: Advanced JavaScript</label>
+            </div>
+            <div>
+                <input type="radio" id="workshop3" name="workshop" value="workshop3">
+                <label for="workshop3">Workshop 3: UI/UX Design</label>
+            </div>
+        </div>
+
+        <div class="payment-options">
+            <label>Payment Method:</label>
+            <div>
+                <input type="checkbox" id="credit-card" name="payment" value="credit-card">
+                <label for="credit-card">Credit Card</label>
+            </div>
+            <div>
+                <input type="checkbox" id="paypal" name="payment" value="paypal">
+                <label for="paypal">PayPal</label>
+            </div>
+            <div>
+                <input type="checkbox" id="bank-transfer" name="payment" value="bank-transfer">
+                <label for="bank-transfer">Bank Transfer</label>
+            </div>
+            <head> 
+                <meta charset="UTF-8"> 
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+                <title>Dynamic QR Code</title> 
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script> 
+                <style> 
+                    #qrcode { 
+                        margin: 20px; 
+                    } 
+                </style> 
+            </head> 
+            <body> 
+                <h1>Scan-to-Pay</h1> 
+            <center>
+                <div id="qrcode"></div> </center>
+             
+                <script> 
+                    $(document).ready(function() { 
+                        var qrData = "https://example.com"; // Replace with the data you want to encode 
+                        $('#qrcode').qrcode({ 
+                            text: qrData, 
+                            width: 128, 
+                            height: 128 
+                        }); 
+                    }); 
+                </script> 
+            
+                    </div>
+            <br>
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info" rows="4" placeholder="Any additional information or special requirements"></textarea>
+            
+                    <input type="submit" value="Register">
+            <br>
+                    <input type="reset" value="Reset">
+                </form>
+            
+                <div class="success-message" id="success-message">
+                    Registration successful! Thank you for signing up.
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById('registration-form').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the default form submission
+            
+                    // Hide the form and show the success message
+                    document.querySelector('form').style.display = 'none';
+                    document.getElementById('success-message').style.display = 'block';
+                });
+            </script>
+            
+            </body>
+            </html>
+
